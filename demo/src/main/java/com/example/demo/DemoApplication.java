@@ -19,6 +19,6 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		this.heroService.insertHero(new HeroDTO("Finaritra"));
+		this.heroService.insertHeros(new HeroDTO("Finaritra"));
 	}
 }

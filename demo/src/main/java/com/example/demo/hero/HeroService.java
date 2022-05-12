@@ -12,7 +12,7 @@ public class HeroService {
         return this.heroRepo.findAll();
     }
 
-    public boolean insertHero(HeroDTO heroDTO) {
+    public boolean insertHeros(HeroDTO heroDTO) {
         try {
             this.heroRepo.save(Hero.of(null,heroDTO.Name));
             return true;
