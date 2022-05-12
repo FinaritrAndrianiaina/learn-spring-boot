@@ -1,0 +1,21 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+<nav>
+  <a class="button" routerLinkActive="active-link" routerLink="/crisis-list">Crisis Center</a>
+  |
+  <a class="button" routerLinkActive="active-link" routerLink="/heroes-list">Heroes</a>
+  |
+  <a class="button" routerLinkActive="active-link" routerLink="/heroes-list/details/4">Heroes 4</a>
+  |
+  <a class="button" routerLinkActive="active-link" routerLink="/heroes-list/details/add">Add</a>
+  |
+  <a class="button" routerLinkActive="active-link" routerLink="/heroes-list/details/update">Update</a>
+</nav>
+<select [formControl]="profileControl">
+  <option ngValue="ADMIN">ADMIN</option>
+  <option ngValue="GUEST">GUEST</option>
+</select>
+
+<div *ngxPermissionsOnly="['ADMIN']">ADMIN</div>
+<div *ngxPermissionsOnly="['GUEST']">GUEST</div>
+<router-outlet></router-outlet>

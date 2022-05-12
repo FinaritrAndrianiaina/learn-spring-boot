@@ -21,6 +21,4 @@ public class DemoApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		this.heroService.insertHero(new HeroDTO("Finaritra"));
 	}
-
-
 }
